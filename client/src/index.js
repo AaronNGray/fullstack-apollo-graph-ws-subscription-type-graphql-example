@@ -24,7 +24,7 @@ const wsLink = new WebSocketLink({
 });
 
 const sub_client = createClient({
-    url: 'ws://localhost:4000/subscriptions',
+    url: 'ws://localhost:8000/graphql',
 });
 
 const terminatingLink = split(
