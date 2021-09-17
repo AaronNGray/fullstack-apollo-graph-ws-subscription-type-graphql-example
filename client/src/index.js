@@ -4,11 +4,9 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { getMainDefinition } from 'apollo-utilities';
 import { ApolloLink, split } from 'apollo-link';
-import { WebSocketLink } from 'apollo-link-ws';
-import { createClient } from 'graphql-ws';
+import { WebSocketLink } from './WebSocketLink';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
-
 
 import App from './App';
 
@@ -17,14 +15,10 @@ const httpLink = new HttpLink({
 });
 
 const wsLink = new WebSocketLink({
-  uri: `ws://localhost:8000/graphql`,
+  url: `ws://localhost:8000/graphql`,
   options: {
     reconnect: true,
   },
-});
-
-const sub_client = createClient({
-    url: 'ws://localhost:8000/graphql',
 });
 
 const terminatingLink = split(
@@ -48,7 +42,7 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-  <ApolloProvider client={client} sub_client={sub_client}>
+  <ApolloProvider client={client}>
     <App />
   </ApolloProvider>,
   document.getElementById('root'),
