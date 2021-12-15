@@ -1,6 +1,6 @@
 # fullstack-apollo-graph-ws-subscription-type-graphql-example
 
-A minimal Apollo Server 3 with Apollo Client 3 application with subscriptions.
+A minimal Apollo Server 3 with Apollo Client 3 application with subscriptions and type-graphql.
 
 ## Installation
 
