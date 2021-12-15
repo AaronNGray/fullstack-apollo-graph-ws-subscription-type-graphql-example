@@ -5,6 +5,7 @@
   "dependencies": {
     "@apollo/client": "^3.4.11",
     "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client-graphql-ws": "^0.0.4",
     "apollo-link": "^1.2.3",
     "apollo-link-http": "^1.5.5",
     "apollo-link-ws": "^1.0.9",
@@ -15,8 +16,7 @@
     "react-apollo": "^2.2.4",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5",
-    "subscriptions-transport-ws": "^0.9.19",
-    "apollo-client-graphql-ws": "git://github.com/AaronNGray/apollo-client-graphql-ws.git"
+    "subscriptions-transport-ws": "^0.9.19"
   },
   "scripts": {
     "start": "react-scripts start",
